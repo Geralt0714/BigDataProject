@@ -17,3 +17,6 @@ Big Data Analysis (CS-GY-9223) Course Project
 
 ## Bonus: Data Exploration
 *\<TODO\>*
+
+## Progress Record
+[click here](https://docs.google.com/a/nyu.edu/document/d/1lb4G175Azy7y_LmMGTT5y8LBkkY4fC9XYpsEkU3PuVI/edit?usp=sharing)
