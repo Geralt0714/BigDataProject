@@ -3,8 +3,9 @@
 Green Cab Data Info
 
 ## Column Info
+
 |Column Number	|Number in Code	|Column Name 	|Comments	|
-|:-------------:|:-------------:|				|			|
+|:-------------:|:-------------:|:-------------:|:---------:|
 |1				|0		  		|VenderID		|			|
 |2				|1				|Pickup_time	|			|
 |3				|2				|Dropoff_time	|			|
