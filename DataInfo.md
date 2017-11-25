@@ -9,8 +9,8 @@ Green Cab Data Info
 |1				|0		  		|VenderID		|			|
 |2				|1				|Pickup_time	|			|
 |3				|2				|Dropoff_time	|			|
-|4				|3				|Store& Forward	|*			|
-|5				|4				|RateCodeId		|*			|
+|4				|3				|Store& Forward	|[1]		|
+|5				|4				|RateCodeId		|[1]		|
 |6				|5				|Pickup_Long	|			|
 |7				|6				|Pickup_lati	|			|
 |8				|7				|Dropoff_long	|			|
@@ -22,17 +22,17 @@ Green Cab Data Info
 |14				|13				|MTA_tax		|			|
 |15				|14				|Tip			|			|
 |16				|15				|Tolls			|			|
-|17				|16				|Ehail_fee		|*			|
+|17				|16				|Ehail_fee		|[1]		|
 |18				|17				|ImprovementFee	|			|
 |19				|18				|TotalCharge	|			|
-|20				|19				|PaymentType	|**			|
+|20				|19				|PaymentType	|[2]		|
 |21				|20				|Trip_trpe		|			|
 
-* Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf). We are not using these data because they are not related to this project or, they are the same in all data files.
+[1]Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf). We are not using these data because they are not related to this project or void, or they are the same in all data files.
 
-**1 = Credit card 
-  2 = Cash
-  3 = No charge 
-  4 = Dispute
-  5 = Unknown
-  6 = Voided trip
+[2]1 = Credit card 
+   2 = Cash
+   3 = No charge 
+   4 = Dispute
+   5 = Unknown
+   6 = Voided trip
