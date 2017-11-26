@@ -30,12 +30,13 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 
 [1]Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf). We are not using these data because they are not related to this project, or they are the same (or void) in all data files.
 
-[2]1 = Credit card 
-   2 = Cash
-   3 = No charge 
-   4 = Dispute
-   5 = Unknown
-   6 = Voided trip
+[2]
+1 = Credit card <br />
+2 = Cash <br />
+3 = No charge <br />
+4 = Dispute <br />
+5 = Unknown <br />
+6 = Voided trip <br />
 
 
 ## Yellow Taxi Column Info
@@ -64,16 +65,17 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 
 [2]Details in taxi+zone+lookup.csv in root directory. Original Source:[Click Here](https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv)
 
-[3]1 = Credit card 
-   2 = Cash
-   3 = No charge 
-   4 = Dispute
-   5 = Unknown
-   6 = Voided trip
+[3]
+1 = Credit card <br />
+2 = Cash <br />
+3 = No charge <br />
+4 = Dispute <br />
+5 = Unknown <br />
+6 = Voided trip <br />
 
 ## Data Cleaning Process Info
 
-For green taxi data, remove column (4,5,14,17,18,20), transform the pickup & dropoff location coordinates into borough name string.
+For green taxi data, remove column (4,5,14,17,18,20), transform the pickup & dropoff location coordinates into borough name string. <br />
 For yellow taxi data, remove column (6,7,13,16), transform pickup & dropoff location id into borough name string, re-arrange the order of columns.
 
 ## Data Format After Cleaning
@@ -95,10 +97,10 @@ For yellow taxi data, remove column (6,7,13,16), transform pickup & dropoff loca
 |13            |12            |PaymentType   |[1]     |
 
 
-[1]1 = Credit card 
-   2 = Cash
-   3 = No charge 
-   4 = Dispute
-   5 = Unknown
-   6 = Voided trip
-
+[1]
+1 = Credit card <br />
+2 = Cash <br />
+3 = No charge <br />
+4 = Dispute <br />
+5 = Unknown <br />
+6 = Voided trip <br />
