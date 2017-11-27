@@ -11,7 +11,7 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 |3				|2				|Dropoff_time	|			|
 |4				|3				|Store& Forward	|[1]		|
 |5				|4				|RateCodeId		|[1]		|
-|6				|5				|Pickup_Long	|			|
+|6				|5				|Pickup_long	|			|
 |7				|6				|Pickup_lati	|			|
 |8				|7				|Dropoff_long	|			|
 |9				|8				|Dropoff_lati	|			|
@@ -76,7 +76,10 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 ## Data Cleaning Process Info
 
 For green taxi data, remove column (4,5,14,17,18,20), transform the pickup & dropoff location coordinates into borough name string. <br />
-For yellow taxi data, remove column (6,7,13,16), transform pickup & dropoff location id into borough name string, re-arrange the order of columns.
+For yellow taxi data, remove column (6,7,13,16), transform pickup & dropoff location id into borough name string, re-arrange the order of columns.<br />
+
+Remove rows with location coordinates of zeros
+
 
 ## Data Format After Cleaning
 
@@ -85,8 +88,8 @@ For yellow taxi data, remove column (6,7,13,16), transform pickup & dropoff loca
 |1          |0          |VenderID      |        |
 |2          |1          |Pickup_time   |        |
 |3          |2          |Dropoff_time  |        |
-|4          |3          |PickupLocation   |        |
-|5          |4          |DropoffLocation  |        |
+|4          |3          |PickupLocation   |[1]        |
+|5          |4          |DropoffLocation  |[1]        |
 |6            |5          |PassengerCount   |        |
 |7            |6            |Trip_distance |        |
 |8            |7            |Fare       |        |
@@ -94,10 +97,10 @@ For yellow taxi data, remove column (6,7,13,16), transform pickup & dropoff loca
 |10            |9            |Tip        |        |
 |11            |10            |Tolls         |        |
 |12            |11            |TotalCharge   |        |
-|13            |12            |PaymentType   |[1]     |
+|13            |12            |PaymentType   |[2]     |
 
-
-[1]
+[1]string with borough name
+[2]
 1 = Credit card <br />
 2 = Cash <br />
 3 = No charge <br />

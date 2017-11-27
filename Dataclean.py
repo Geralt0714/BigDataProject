@@ -23,7 +23,9 @@ for line in sys.stdin:
 		new_file.write(line)
 		continue 
 	line = line.split(",")
-	if len(line)== 21:
+	if len(line)== 21:     #green taxi data
+		if (float(line[5])==0 or float(line[6])==0 or float(line[7])==0 or float(line[8])==0):
+			continue
 		line = line[0]+","+line[1]+","+line[2]+","+getLocation_green(line[5],line[6])+","+getLocation_green(line[7],line[8])+ \
 		","+line[9]+","+line[10]+","+line[11]+","+line[12]+"," +line[14]+","+line[15]+","+line[18]+","+line[19]
 		new_file.write(line)
