@@ -39,44 +39,7 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 6 = Voided trip <br />
 
 
-## Green Taxi Column Info 2016_07-2016_12
-
-|Column Number	|Number in Code	|Column Name 	|Comments	|
-|:-------------:|:-------------:|:-------------:|:---------:|
-|1				|0		  		|VenderID		|			|
-|2				|1				|Pickup_time	|			|
-|3				|2				|Dropoff_time	|			|
-|4				|3				|Store& Forward	|[1]		|
-|5				|4				|RateCodeId		|[1]		|
-|6				|5				|PickupLocationID	|[2]			|
-|7				|6				|DropoffLocationID	|[2]			|
-|8				|7				|PassengerCount	|			|
-|9				|8				|Trip_distance	|			|
-|10				|9				|Fare			|			|
-|11				|10				|Extra Fare		|			|
-|12				|11				|MTA_tax		|[1]		|
-|13				|12				|Tip			|			|
-|14				|13				|Tolls			|			|
-|15				|14				|Ehail_fee		|[1]		|
-|16				|15				|ImprovementFee	|[1]			|
-|17				|16				|TotalCharge	|			|
-|18				|17				|PaymentType	|[3]		|
-|19				|18				|Trip_trpe		|[1]			|
-
-[1]Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf). We are not using these data because they are not related to this project, or they are the same (or void) in all data files.
-
-[2]Details in taxi+zone+lookup.csv in root directory. Original Source:[Click Here](https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv)
-
-[3]
-1 = Credit card <br />
-2 = Cash <br />
-3 = No charge <br />
-4 = Dispute <br />
-5 = Unknown <br />
-6 = Voided trip <br />
-
-
-## Yellow Taxi Column Info 2016_01-2016-06
+## Yellow Taxi Column Info 2015_01-2016-06
 
 |Column Number	|Number in Code	|Column Name 	|Comments	|
 |:-------------:|:-------------:|:-------------:|:---------:|
@@ -112,39 +75,6 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 5 = Unknown <br />
 6 = Voided trip <br />
 
-## Yellow Taxi Column Info 2016_07-2016-12
-
-|Column Number	|Number in Code	|Column Name 	|Comments	|
-|:-------------:|:-------------:|:-------------:|:---------:|
-|1				|0		  		|VenderID		|			|
-|2				|1				|Pickup_time	|			|
-|3				|2				|Dropoff_time	|			|
-|4				|3				|PassengerCount	|			|
-|5				|4				|TripDistance	|			|
-|6				|5				|RatecodeId		|[1]		|
-|7				|6				|Store&Forward	|[1]		|
-|8				|7				|PickupLocation	|[2]		|
-|9				|8				|DropoffLocation|[2]		|
-|10				|9				|PaymentType	|[3]		|
-|11				|10				|Fare			|			|
-|12				|11				|Extra			|			|
-|13				|12				|MTA_tax		|[1]		|
-|14				|13				|Tip			|			|
-|15				|14				|Tolls			|			|
-|16				|15				|Improvement	|[1]		|
-|17				|16				|TotalCharge	|			|
-
-[1]Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf). We are not using these data because they are not related to this project, or they are the same (or void) in all data files.
-
-[2]Details in taxi+zone+lookup.csv in root directory. Original Source:[Click Here](https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv)
-
-[3]
-1 = Credit card <br />
-2 = Cash <br />
-3 = No charge <br />
-4 = Dispute <br />
-5 = Unknown <br />
-6 = Voided trip <br />
 
 ## Data Cleaning Process Info
 
@@ -172,7 +102,7 @@ Remove rows with location coordinates of zeros
 |12            |11            |TotalCharge   |        |
 |13            |12            |PaymentType   |[2]     |
 
-[1]string with borough name
+[1]string with borough name  
 [2]
 1 = Credit card <br />
 2 = Cash <br />
