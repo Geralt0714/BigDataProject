@@ -82,6 +82,8 @@ For green taxi data, remove column (4,5,14,17,18,20), transform the pickup & dro
 For yellow taxi data, remove column (6,7,13,16), transform pickup & dropoff location id into borough name string, re-arrange the order of columns.<br />
 
 Remove rows with location coordinates of zeros
+Remove rows with location coordinates outside of NYC
+Remove rows with null value(s) 
 
 
 ## Data Format After Cleaning
@@ -91,16 +93,18 @@ Remove rows with location coordinates of zeros
 |1          |0          |VenderID      |        |
 |2          |1          |Pickup_time   |        |
 |3          |2          |Dropoff_time  |        |
-|4          |3          |PickupLocation   |[1]        |
-|5          |4          |DropoffLocation  |[1]        |
-|6            |5          |PassengerCount   |        |
-|7            |6            |Trip_distance |        |
-|8            |7            |Fare       |        |
-|9            |8            |Extra Fare    |        |
-|10            |9            |Tip        |        |
-|11            |10            |Tolls         |        |
-|12            |11            |TotalCharge   |        |
-|13            |12            |PaymentType   |[2]     |
+|4          |3          |Pickup_long   |        |
+|5          |4          |Pickup_lati   |        |
+|6          |5          |Dropoff_long  |        |
+|7          |6          |Dropoff_lati  |        |
+|8            |7          |PassengerCount   |        |
+|9            |8            |Trip_distance |        |
+|10            |9            |Fare       |        |
+|11           |10            |Extra Fare    |        |
+|12            |11            |Tip        |        |
+|13            |12            |Tolls         |        |
+|14            |13            |TotalCharge   |        |
+|15            |14            |PaymentType   |[2]     |
 
 [1]string with borough name  
 [2]
