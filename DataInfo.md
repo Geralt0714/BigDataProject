@@ -2,7 +2,7 @@
 
 Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 
-## Green Taxi Column Info 2016_01-2016_06
+## Green Taxi Column Info 2014_01-2016_06
 
 |Column Number	|Number in Code	|Column Name 	|Comments	|
 |:-------------:|:-------------:|:-------------:|:---------:|
@@ -29,7 +29,7 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 |21				|20				|Trip_trpe		|[1]			|
 
 [1]Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf). We are not using these data because they are not related to this project, or they are the same (or void) in all data files.
-
+Improvement Fees are not collected before .
 [2]<br />
 1 = Credit card <br />
 2 = Cash <br />
@@ -39,7 +39,7 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 6 = Voided trip <br />
 
 
-## Yellow Taxi Column Info 2015_01-2016-06
+## Yellow Taxi Column Info 2014_01-2016-06
 
 |Column Number	|Number in Code	|Column Name 	|Comments	|
 |:-------------:|:-------------:|:-------------:|:---------:|
@@ -63,7 +63,7 @@ Green Taxi & Yellow Taxi Data Info, Data Cleaning Process Info
 |18				|17				|Improvement	|[1]		|
 |19				|18				|TotalCharge	|			|
 
-[1]Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf). We are not using these data because they are not related to this project, or they are the same (or void) in all data files.
+[1]Details in [Click Here](http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf). We are not using these data because they are not related to this project, or they are the same (or void) in all data files.Improvement Fees are not collected before 2015
 
 [2]Details in taxi+zone+lookup.csv in root directory. Original Source:[Click Here](https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv)
 

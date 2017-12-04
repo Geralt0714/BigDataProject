@@ -10,7 +10,16 @@ Big Data Analysis (CS-GY-9223) Course Project
 [NYC Taxi & Limousine Commission Trip Record Data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 ## Part I: Data Cleaning
-*\<TODO\>*
+####To download raw Data<br \>
+`./download_raw_data.sh`
+####Run data cleaning process<br \>
+`./data_clean.sh`
+
+In this process, it will create directory ./Data and ./Datacleaned to store the raw data and data files after cleaning
+
+
+
+
 
 ## Part II: Data Analysis
 *\<TODO\>*
