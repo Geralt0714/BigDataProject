@@ -14,7 +14,7 @@ Big Data Analysis (CS-GY-9223) Course Project
 #### To download raw Data  
 `./download_raw_data.sh`  
 
-####Run data cleaning process  
+#### Run data cleaning process  
 `./data_clean.sh`  
 
 In this process, it will create directory ./Data and ./Datacleaned to store the raw data and data files after cleaning<br \>
