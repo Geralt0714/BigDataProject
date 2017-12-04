@@ -15,11 +15,9 @@ Big Data Analysis (CS-GY-9223) Course Project
 ####Run data cleaning process<br \>
 `./data_clean.sh`
 
-In this process, it will create directory ./Data and ./Datacleaned to store the raw data and data files after cleaning
+In this process, it will create directory ./Data and ./Datacleaned to store the raw data and data files after cleaning<br \>
 
-
-
-
+For more details, see DataInfo.md
 
 ## Part II: Data Analysis
 *\<TODO\>*
