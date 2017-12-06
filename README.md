@@ -10,7 +10,7 @@ Big Data Analysis (CS-GY-9223) Course Project
 [NYC Taxi & Limousine Commission Trip Record Data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 ## Part I: Data Cleaning
-
+If your are using dumbo cluster at NYU HPC, please put the whole directory under /scratch/your-netid/ directory since the data files exceed the storage limit under /home/your-netid/ 
 #### To download raw Data  
 `./download_raw_data.sh`  
 
