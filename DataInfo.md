@@ -91,8 +91,8 @@ Remove rows with null value(s)
 |Column Number |Number in Code   |Column Name   |Comments   |
 |:-------------:|:-------------:|:-------------:|:---------:|
 |1          |0          |VenderID      |        |
-|2          |1          |Pickup_time   |        |
-|3          |2          |Dropoff_time  |        |
+|2          |1          |Pickup_time   |[1]        |
+|3          |2          |Dropoff_time  |[1]        |
 |4          |3          |Pickup_long   |        |
 |5          |4          |Pickup_lati   |        |
 |6          |5          |Dropoff_long  |        |
@@ -106,7 +106,8 @@ Remove rows with null value(s)
 |14            |13            |TotalCharge   |        |
 |15            |14            |PaymentType   |[2]     |
 
-[1]string with borough name  
+[1]Format:"year-month-date hour-minute-second"<br />
+Example:2015-01-01 00:34:42 
 [2]
 1 = Credit card <br />
 2 = Cash <br />

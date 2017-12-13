@@ -16,7 +16,7 @@ lati_min = 40.496408
 
 ##################################
 def singleMonthProcess(old_file_name,new_file_name,taxiType):
-	new_file = open(new_file_name,'w')
+	new_file = open(new_file_name,'a+')
 	old_file = open(old_file_name,'r')
 	print("now in file: "+old_file_name)
 	total_count = [0,0]
@@ -104,35 +104,35 @@ def singleYearProcess(year,prefex1,prefex2):
 	if int(year)<2016:				# we have 12 months data before year 2016
 			for i in range(12):
 				if i+1<10:
+					new_file_name = prefex2+"green_"+str(year)+".csv"
 					old_file_name = prefex1+"green_tripdata_"+str(year)+"-0"+ str(i+1)+".csv"
-					new_file_name = prefex2+"green_cleaned_"+str(year)+"-0"+str(i+1)+".csv"
 					singleMonthProcess(old_file_name,new_file_name,"green")
+					new_file_name = prefex2+"yellow_"+str(year)+".csv"
 					old_file_name = prefex1+"yellow_tripdata_"+str(year)+"-0"+ str(i+1)+".csv"
-					new_file_name = prefex2+"yellow_cleaned_"+str(year)+"-0"+str(i+1)+".csv"
 					singleMonthProcess(old_file_name,new_file_name,"yellow")
 				else:
+					new_file_name = prefex2+"green_"+str(year)+".csv"					
 					old_file_name = prefex1+"green_tripdata_"+str(year)+"-"+ str(i+1)+".csv"
-					new_file_name = prefex2+"green_cleaned_"+str(year)+"-"+str(i+1)+".csv"
 					singleMonthProcess(old_file_name,new_file_name,"green")
+					new_file_name = prefex2+"yellow_"+str(year)+".csv"
 					old_file_name = prefex1+"yellow_tripdata_"+str(year)+"-"+ str(i+1)+".csv"
-					new_file_name = prefex2+"yellow_cleaned_"+str(year)+"-"+str(i+1)+".csv"
 					singleMonthProcess(old_file_name,new_file_name,"yellow")
 
 	if int(year)==2016:				# we only use Jan-Jun 2016 data beacause after Jun 2016 there are no location coordinates in data
-		for i in range(7):
+		for i in range(6):
+			new_file_name = prefex2+"green_"+str(year)+".csv"
 			old_file_name = prefex1+"green_tripdata_"+str(year)+"-0"+ str(i+1)+".csv"
-			new_file_name = prefex2+"green_cleaned_"+str(year)+"-0"+str(i+1)+".csv"
 			singleMonthProcess(old_file_name,new_file_name,"green")
+			new_file_name = prefex2+"yellow_"+str(year)+".csv"
 			old_file_name = prefex1+"yellow_tripdata_"+str(year)+"-0"+ str(i+1)+".csv"
-			new_file_name = prefex2+"yellow_cleaned_"+str(year)+"-0"+str(i+1)+".csv"
 			singleMonthProcess(old_file_name,new_file_name,"yellow")
 
 
 ###############################
 ## main process function
 
-#for year in range(2014,2017):
-singleYearProcess(2016,"Data/","Datacleaned/")
+for year in range(2014,2017):
+	singleYearProcess(year,"Data/","Datacleaned/")
 
 
 
