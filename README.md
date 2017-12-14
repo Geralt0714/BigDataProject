@@ -28,7 +28,7 @@ For more data cleaning details, see DataInfo.md
 ## Part II: Data Analysis
 
 #### Push data file into HDFS
-`./push_to_hdfs.sh`
+`hfs -put Datacleaned/.`
 This could take a moment <br />
 After pushing into hdfs, you can use `hfs -ls Datacleaned` to see the loaded data files<br />
 
