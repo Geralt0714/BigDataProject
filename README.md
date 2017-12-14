@@ -20,8 +20,8 @@ you can use `cd /scratch/your-netid/` to do that
 #### Run data cleaning process  
 `./data_clean.sh`  
 
-In this process, it will create directory ./Data and ./Datacleaned to store the raw data and data files after cleaning<br />
-Those data files are stored locally, not in HDFS<br />
+In this process, it will create directory ./Data and ./Datacleaned to store the raw data and cleaned data files respectively<br />
+These data files are stored locally, not in HDFS<br />
 
 For more data cleaning details, see DataInfo.md
 
