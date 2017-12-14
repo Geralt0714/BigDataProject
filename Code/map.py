@@ -77,6 +77,13 @@ for line in sys.stdin:
 	if (line[0]=="V"or line[0]=='v'):
 		continue
 	line = line.split(",")
+	## prepare data
+			year_P,month_P,date_P = int(line[1].split(" ")[0].split("-"))
+			hour_P,minu_P,seco_P = int(line[1].split(" ")[1].split(':'))
+
+			year_D,month_D,date_D = int(line[2].split(" ")[0].split("-"))
+			hour_D,minu_D,seco_D = int(line[2].split(" ")[1].split(':'))
+
 	key=0
 	value = 0
 	if float(line[13])<15:
@@ -117,15 +124,6 @@ for line in sys.stdin:
 
 	if (check_midtown(float(line[3]),float(line[4]))):
 		if (check_JFK(float(line[5]),float(line[6]))):
-			time_P = line[1].split(" ")[1]
-			date_P = line[1].split(" ")[0].split("-")[2]
-			hour_P = int(time_P.split(':')[0])
-			minu_P = int(time_P.split(':')[1])
-
-			time_D = line[2].split(" ")[1]
-			date_D = line[2].split(" ")[0].split("-")[2]
-			hour_D = int(time_D.split(':')[0])
-			minu_D = int(time_D.split(':')[1])
 
 			print("5-%s,1" %(hour_P))
 			if(date_P==date_D):
