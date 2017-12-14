@@ -10,7 +10,6 @@ value = None
 sum = 0
 for line in sys.stdin:
 	key, value = line.split(",")
-	key = float(key)
 	value = float(value)
 	if currentkey==None:
 		currentkey = key
