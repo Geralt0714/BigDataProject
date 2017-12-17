@@ -126,7 +126,7 @@ for line in sys.stdin:
 
 	
 
-	if (line[14] != 'CRD'):
+	if (line[14] != 'CRD' or line[14] =="1"):
 		print('2.1,1')
 	else:
 		print('2.2,1')
