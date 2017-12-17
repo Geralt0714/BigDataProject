@@ -6,4 +6,5 @@
 
 . /etc/profile.d/modules.sh
 module load python/gnu/2.7.11
-python Code/reduce.py
+python Code/map3.py
+
