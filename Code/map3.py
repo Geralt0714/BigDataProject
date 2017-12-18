@@ -70,7 +70,7 @@ lati_m_max = 40.881219
 lati_m_min = 40.700174
 
 long_m_range = long_m_max - long_m_min
-lati_m_ramge = lati_m_max - lati_m_min
+lati_m_range = lati_m_max - lati_m_min
 
 ## lower Manh coords range
 long_lm_max = -73.955139
