@@ -3,7 +3,6 @@
 import sys
 import string
 import numpy
-import csv
 
 
 def check_midtown(longitude,latitude):
@@ -79,8 +78,7 @@ for line in sys.stdin:
 
 
 	line = line.split(",")
-	if float(line[9])==0:
-		continue
+
 	## prepare data
 	year_P,month_P,date_P = line[1].split(" ")[0].split("-")
 	year_P = int(year_P)
@@ -102,8 +100,6 @@ for line in sys.stdin:
 	Trip_distance=float(line[8])
 
 
-	key=0
-	value = 0
 	if (float(line[8])==0 or float(line[9])==0):
 		print("0-1,1")
 		continue
@@ -111,15 +107,15 @@ for line in sys.stdin:
 
 ## fees related mining
 	if float(line[13])<15:
-		print('1-1.1')
+		print('1-1,1')
 	if (float(line[13])>=15 and float(line[13])<40):
-		print('1-2.1')
+		print('1-2,1')
 	if (float(line[13])>=40 and float(line[13])<70):
-		print('1-3.1')
+		print('1-3,1')
 	if (float(line[13])>=70 and float(line[13])<100):
-		print('1-4.1')
+		print('1-4,1')
 	if float(line[13])>=100 :
-		print('1-5.1')
+		print('1-5,1')
 	## credit card vs cash
 	if (line[14] != 'CRD' or line[14] =="1"):
 		print('2-1,1')
@@ -186,7 +182,7 @@ for line in sys.stdin:
 					print("4-%s-3,1" %(hour_P))
 
 
-	## midtown to JFK		
+	# midtown to JFK		
 
 	if (check_midtown(float(line[3]),float(line[4]))):
 		if (check_JFK(float(line[5]),float(line[6]))):
@@ -224,8 +220,6 @@ for line in sys.stdin:
 		print("6-8,1")
 	if (Trip_distance>14):
 		print("6-9,1")
-
-
 
 
     #number of go to/leave manhaton with picktime

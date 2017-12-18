@@ -53,8 +53,7 @@ Documentation for Key-Value pair in Hadoop MapReduce
 |6-5|1|distance above 6 miles less than 8 miles|
 |6-6|1|distance above 8 miles less than 10 miles|
 |6-7|1|distance above 10 miles less than 14 miles|
-|6-8|1|distance above 14 miles less than 2 miles|
-|6-9|1|distance above 14 miles|
+|6-8|1|distance above 14 miles|
 
 
 
