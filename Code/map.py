@@ -99,6 +99,7 @@ for line in sys.stdin:
 	hour_D = int(hour_D)
 	minu_D = int(minu_D)
 	seco_D = int(seco_D)
+	Trip_distance=float(line[8])
 
 
 	key=0
@@ -119,7 +120,7 @@ for line in sys.stdin:
 		print('1-4.1')
 	if float(line[13])>=100 :
 		print('1-5.1')
-
+	## credit card vs cash
 	if (line[14] != 'CRD' or line[14] =="1"):
 		print('2-1,1')
 		print('2-1-%s,1' %(month_P))
@@ -135,42 +136,60 @@ for line in sys.stdin:
 				print('2-4-%s,%s'%(month_P,percent))
 				print ('2-5,1')
 				print('2-5-1,%s' %(percent))
+				print('2-6-1-%s,%s'%(hour,percent))
+				print('2-6-2-%s,1'%(hour))
+	## income for taxi driver
+	print("2-7-1,%s"%(line[9]))	
+	print("2-7-2,%s"%(line[11]))
 
-	
 ## location and time mining
 	print("3-1-1,1")
 	if (check_Manh(float(line[3]),float(line[4]))):
 		print("3-1-2,1")
 	if (check_midtown(float(line[3]),float(line[4]))):
 		print("3-2-%s,1" %(hour_P))
-		print("4-1-1,1")
-	else:
-		print("4-1-2,1")
+		print("3-1-3,1")
+
 
 	if (check_midtown(float(line[3]),float(line[4]))):
 		if (check_midtown(float(line[5]),float(line[6])) != True):
-			print("4-2-%s,1",%(hour_P))
+			print("3-3-%s,1" %(hour_P))
 
 	if (check_midtown(float(line[3]),float(line[4]))!=True):
 		if (check_midtown(float(line[5]),float(line[6]))):
-			print("4-3-%s,1",%(hour_P))
+			print("3-4-%s,1" %(hour_P))
+
+	if (check_Manh(float(line[3]),float(line[4]))):
+		if (check_Manh(float(line[5]),float(line[6])) != True):
+			print("3-5-%s,1" %(hour_P))
+
+	if (check_Manh(float(line[3]),float(line[4]))!=True):
+		if (check_Manh(float(line[5]),float(line[6]))):
+			print("3-6-%s,1" %(hour_P))
+
+   	# Midtown to LGA transportation condition
+   	if (check_midtown(float(line[3]),float(line[4]))):
+		if (check_LGA(float(line[5]),float(line[6]))):
+			if(date_P==date_D):
+				time = hour_D-hour_P + (minu_D - minu_P)/60
+				if (time != 0 and float(line[8])!= 0 ): 
+					speed = float(line[8])/time
+					print("4-%s-1,%s" %(hour_P,time))
+					print("4-%s-2,%s" %(hour_P,speed))
+					print("4-%s-3,1" %(hour_P))
+			else:
+				time = hour_D+24-hour_P + (minu_D-minu_P)/60
+				if (time !=0 and float(line[8])!=0):
+					speed = float(line[8])/time
+					print("4-%s-1,%s" %(hour_P,time))
+					print("4-%s-2,%s" %(hour_P,speed))
+					print("4-%s-3,1" %(hour_P))
 
 
-
-
-
-
-
-
-
-
-
-
-
+	## midtown to JFK		
 
 	if (check_midtown(float(line[3]),float(line[4]))):
 		if (check_JFK(float(line[5]),float(line[6]))):
-
 			print("5-%s,1" %(hour_P))
 			if(date_P==date_D):
 				time = hour_D-hour_P + (minu_D - minu_P)/60
@@ -186,68 +205,36 @@ for line in sys.stdin:
 					print("5-%s-1,%s" %(hour_P,time))
 					print("5-%s-2,%s" %(hour_P,speed))
 					print("5-%s-3,1" %(hour_P))
-
-
-
-
-
-
-
     #distribution of distance
-	if (Trip_distance>0 and Trip_distance<=5): 
-		print("9-1-1,1")
-    	if (Trip_distance>5 and Trip_distance<=10):
-    		print("9-1-2,1")
-    	if (Trip_distance>10 and Trip_distance<=15):
-    		print("9-1-3,1")
-    	if (Trip_distance>15):
-    		print("9-1-4,1")
+	if (Trip_distance>0 and Trip_distance<=1):
+		print("6-1,1")
+	if (Trip_distance>1 and Trip_distance<=2):
+		print("6-2,1")
+	if (Trip_distance>2 and Trip_distance<=4):
+		print("6-3,1")
+	if (Trip_distance>4 and Trip_distance<=6):
+		print("6-4,1")
+	if (Trip_distance>4 and Trip_distance<=6):
+		print("6-5,1")
+	if (Trip_distance>6 and Trip_distance<=8):
+		print("6-6,1")
+	if (Trip_distance>8 and Trip_distance<=10):
+		print("6-7,1")
+	if (Trip_distance>10 and Trip_distance<=14):
+		print("6-8,1")
+	if (Trip_distance>14):
+		print("6-9,1")
 
-    # Midtown to LGA transportation condition
-   	if (check_midtown(float(line[3]),float(line[4]))):
-		if (check_LGA(float(line[5]),float(line[6]))):
-			if(date_P==date_D):
-				time = hour_D-hour_P + (minu_D - minu_P)/60
-				if (time != 0 and float(line[8])!= 0 ): 
-					speed = float(line[8])/time
-					print("6-%s-1,%s" %(hour_P,time))
-					print("6-%s-2,%s" %(hour_P,speed))
-					print("6-%s-3,1" %(hour_P))
-			else:
-				time = hour_D+24-hour_P + (minu_D-minu_P)/60
-				if (time !=0 and float(line[8])!=0):
-					speed = float(line[8])/time
-					print("6-%s-1,%s" %(hour_P,time))
-					print("6-%s-2,%s" %(hour_P,speed))
-					print("6-%s-3,1" %(hour_P))
 
 
 
     #number of go to/leave manhaton with picktime
-   	if (check_Manh(float(line[3]),float(line[4]))):
-    		if not check_Manh(float(line[5]),float(line[6])):
-    			print("7-%s-1,1" %(hour_P))
-
-
-    	if (check_Manh(float(line[5]),float(line[6]))):
-    		if (hour_P<=22 and hour_P>=19):
-			print("7,1")
-      	 	if not (check_Manh(float(line[3]),float(line[4]))):
-    			print("7-%s-2,1" %(hour_P))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	if (check_Manh(float(line[3]),float(line[4]))):
+		if not check_Manh(float(line[5]),float(line[6])):
+			print("7-1-%s,1" %(hour_P))
+	if not check_Manh(float(line[3]),float(line[4])):
+		if check_Manh(float(line[5]),float(line[6])):
+			print("7-2-%s,1" %(hour_P))
 
 
 
