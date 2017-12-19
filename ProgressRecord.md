@@ -13,3 +13,13 @@ tried to clean all data that we got and found that the server which runs the pyt
 
 ## Thu , Nov 30
 update requirements of our data mining and finished data cleaning report
+
+
+## Mon, Dec 11
+Finished half project requirement.
+
+## Fri, Dec 15
+Finished most code.
+
+## Mon, Dec 18
+fixed code to produce correct output which is due to a lot of irrational data tuples
