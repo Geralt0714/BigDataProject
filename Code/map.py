@@ -210,25 +210,14 @@ for line in sys.stdin:
 		print("6-3,1")
 	if (Trip_distance>4 and Trip_distance<=6):
 		print("6-4,1")
-	if (Trip_distance>4 and Trip_distance<=6):
-		print("6-5,1")
 	if (Trip_distance>6 and Trip_distance<=8):
-		print("6-6,1")
+		print("6-5,1")
 	if (Trip_distance>8 and Trip_distance<=10):
-		print("6-7,1")
+		print("6-6,1")
 	if (Trip_distance>10 and Trip_distance<=14):
-		print("6-8,1")
+		print("6-7,1")
 	if (Trip_distance>14):
-		print("6-9,1")
-
-
-    #number of go to/leave manhaton with picktime
-	if (check_Manh(float(line[3]),float(line[4]))):
-		if not check_Manh(float(line[5]),float(line[6])):
-			print("7-1-%s,1" %(hour_P))
-	if not check_Manh(float(line[3]),float(line[4])):
-		if check_Manh(float(line[5]),float(line[6])):
-			print("7-2-%s,1" %(hour_P))
+		print("6-8,1")
 
 
 
