@@ -117,7 +117,7 @@ for line in sys.stdin:
 	if float(line[13])>=100 :
 		print('1-5,1')
 	## credit card vs cash
-	if (line[14] != 'CRD' or line[14] =="1"):
+	if (line[14] != 'CRD' or float(line[14]) ==1):
 		print('2-1,1')
 		print('2-1-%s,1' %(month_P))
 	else:
