@@ -36,11 +36,11 @@ Documentation for Key-Value pair in Hadoop MapReduce
 |3-5-hour|1				|leaving manhattan|
 |3-6-hour|1|	arriving manhattan|
 |midtown to LGA data mining	|
-|4-hour-1| float(in hours) 	| travel time consumption|
+|4-hour-1| float(in minutes) 	| travel time consumption|
 |4-hour-2|	float(in miles/hour)| travel speed count|
 |4-hour-3|	1				| valid data count|
 |midtown to JFK data mining	|
-|5-hour-1	| float(in hours) 	| travel time consumption|
+|5-hour-1	| float(in minutes) 	| travel time consumption|
 |5-hour-2|	float(in miles/hour)| travel speed count|
 |5-hour-3|	1				| valid data count|
 |trip distance distribution|

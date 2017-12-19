@@ -170,37 +170,40 @@ for line in sys.stdin:
 				time = (hour_D-hour_P)*60 + (minu_D - minu_P)
 				if (time != 0 and float(line[8])!= 0 ): 
 					speed = float(line[8])*60/time
-					print("4-%s-1,%s" %(hour_P,time))
-					print("4-%s-2,%s" %(hour_P,speed))
-					print("4-%s-3,1" %(hour_P))
+					if speed<100:
+						print("4-%s-1,%s" %(hour_P,time))
+						print("4-%s-2,%s" %(hour_P,speed))
+						print("4-%s-3,1" %(hour_P))
 			else:
 				time = (hour_D+24-hour_P)*60 + (minu_D-minu_P)
 				if (time !=0 and float(line[8])!=0):
 					speed = float(line[8])*60/time
-					print("4-%s-1,%s" %(hour_P,time))
-					print("4-%s-2,%s" %(hour_P,speed))
-					print("4-%s-3,1" %(hour_P))
+					if speed<100:
+						print("4-%s-1,%s" %(hour_P,time))
+						print("4-%s-2,%s" %(hour_P,speed))
+						print("4-%s-3,1" %(hour_P))
 
 
 	# midtown to JFK		
 
 	if (check_midtown(float(line[3]),float(line[4]))):
 		if (check_JFK(float(line[5]),float(line[6]))):
-			print("5-%s,1" %(hour_P))
 			if(date_P==date_D):
 				time = (hour_D-hour_P)*60 + (minu_D - minu_P)
 				if (time != 0 and float(line[8])!= 0 ): 
 					speed = float(line[8])*60/time
-					print("5-%s-1,%s" %(hour_P,time))
-					print("5-%s-2,%s" %(hour_P,speed))
-					print("5-%s-3,1" %(hour_P))
+					if speed<100:
+						print("5-%s-1,%s" %(hour_P,time))
+						print("5-%s-2,%s" %(hour_P,speed))
+						print("5-%s-3,1" %(hour_P))
 			else:
 				time = (hour_D+24-hour_P)*60 + (minu_D-minu_P)
 				if (time !=0 and float(line[8])!=0):
 					speed = float(line[8])*60/time
-					print("5-%s-1,%s" %(hour_P,time))
-					print("5-%s-2,%s" %(hour_P,speed))
-					print("5-%s-3,1" %(hour_P))
+					if speed<100:
+						print("5-%s-1,%s" %(hour_P,time))
+						print("5-%s-2,%s" %(hour_P,speed))
+						print("5-%s-3,1" %(hour_P))
     #distribution of distance
 	if (Trip_distance>0 and Trip_distance<=1):
 		print("6-1,1")
