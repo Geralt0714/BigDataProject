@@ -7,7 +7,7 @@ import numpy
 currentkey = None
 key = None
 value = None
-sum = 0
+sum = 0.0
 for line in sys.stdin:
 	key, value = line.strip().split(",")
 	value = float(value)

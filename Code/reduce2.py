@@ -1,6 +1,6 @@
 import sys
 current_key = None
-current_count = 0
+current_count = 0.0
 key = None
 # input comes from STDIN
 for line in sys.stdin:
