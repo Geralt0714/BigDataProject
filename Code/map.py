@@ -163,7 +163,8 @@ for line in sys.stdin:
 		if (check_Manh(float(line[5]),float(line[6]))):
 			print("3-6-%s,1" %(hour_P))
 
-   	# Midtown to LGA transportation condition
+   	# Midtown to LGA 
+   	
    	if (check_midtown(float(line[3]),float(line[4]))):
 		if (check_LGA(float(line[5]),float(line[6]))):
 			if(date_P==date_D):
@@ -204,6 +205,7 @@ for line in sys.stdin:
 						print("5-%s-1,%s" %(hour_P,time))
 						print("5-%s-2,%s" %(hour_P,speed))
 						print("5-%s-3,1" %(hour_P))
+    
     #distribution of distance
 	if (Trip_distance>0 and Trip_distance<=1):
 		print("6-1,1")

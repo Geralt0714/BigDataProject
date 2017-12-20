@@ -23,3 +23,6 @@ Finished most code.
 
 ## Mon, Dec 18
 fixed code to produce correct output which is due to a lot of irrational data tuples
+
+## Tue, Dec 19
+Finish report and finalize the code 
