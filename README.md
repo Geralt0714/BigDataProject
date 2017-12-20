@@ -112,7 +112,7 @@ And<br />
 	-input drawdata1.out 
 	-output draw.out`
 `hfs -getmerge draw.out draw.out`
-Then use the code in `MatlabCode`. We provide same data in the directory
+Then use the code in `MatlabCode`. We provide same data in the directory and the map picture in `PickupLocationMap` directory
 
 
 ## Progress Record

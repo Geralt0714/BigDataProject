@@ -1,7 +1,7 @@
 # key Value Pair Documentation
 Documentation for Key-Value pair in Hadoop MapReduce 
 
-## Details
+## Details in Data Mining Job
 |Key  	|Value Range 	|Description|
 |:-----:|:-------------:|:---------:|
 |Meta data info|
@@ -53,5 +53,13 @@ Documentation for Key-Value pair in Hadoop MapReduce
 |6-7|1|distance above 10 miles less than 14 miles|
 |6-8|1|distance above 14 miles|
 
+## Details in Pickup Location Map Drawing
 
+|Key  	|Value Range 	|Description|
+|:-----:|:-------------:|:---------:|
+|xpixel-ypixel-1|1|NYC Map|
+|xpixel-ypixel-2|1|Manhattan Map|
+|xpixel-ypixel-3|1|Lower Manhattan Map|
+|xpixel-ypixel-4|1|JFK Map|
+|xpixel-ypixel-5|1|LGA Map|
 
